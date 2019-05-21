@@ -56,7 +56,7 @@ it can be use to...
 - ♥ with claims (JWT)
 
 ### JWT (json web token)
-> base64 encoded json
+> base64 encoded json. [rfc7519](https://tools.ietf.org/html/rfc7519)
 
 **attributes:**
 - header
