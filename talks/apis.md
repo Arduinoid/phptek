@@ -43,3 +43,37 @@ it can be use to...
 - import collection into postmane
 - outline server and client
 
+---------------------------
+
+## Token API
+
+> you use your id to get a token to then prove you are who you say you are
+
+### Token Types
+- simple generated random text (api key)
+- signed key (OAuth1)
+- long (refresher token) and short lived (OAuth2)
+- ♥ with claims (JWT)
+
+### JWT
+> base64 encoded json
+
+**attributes:**
+- header
+- body
+- signature
+
+```json
+# example of JWT
+[
+    {
+        "alg": "HS256",
+        "type": "JWT"
+    },
+    {
+        "sub": "1234568",
+        "name": "John Doe",
+        "iat": "987654325"
+    }
+]
+```
