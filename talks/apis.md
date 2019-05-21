@@ -77,3 +77,38 @@ it can be use to...
     }
 ]
 ```
+
+------------------
+
+## API tools you should be using
+
+getting to know HTTP
+
+### Request
+- host
+- path
+- method
+- headers
+- body
+
+### response
+- status
+- headers
+- body
+
+### **HTTP** Vers
+- **GET** (should be safe to book mark or make repeat requests)
+- **POST**
+- **DELETE**
+- **PUT** (having the whole record making one or more changes and sending the whole thing back)
+- **PATCH** (piecing together a record with only parts of the record fields)
+- **HEAD**
+
+## HTTP headers
+- request headers: `Host`, `Accept`
+- response header: ` ETag`, `Location`
+- *something*: `Content-Type`
+
+### tools
+- curl, postman, insomnia
+- [httpbin](https://httpbin.org)
