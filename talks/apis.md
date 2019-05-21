@@ -55,7 +55,7 @@ it can be use to...
 - long (refresher token) and short lived (OAuth2)
 - ♥ with claims (JWT)
 
-### JWT
+### JWT (json web token)
 > base64 encoded json
 
 **attributes:**
