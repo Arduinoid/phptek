@@ -43,13 +43,15 @@ something that can be used in different contexts.
 - composer.json
 - composer.lock
 
-**composer.json**
-```json
-{
-    "name": "acme/blog",
-    "repository": [
-        "type": "vcs",
-        "url": "github.com/blah/hello-world"
-    ]
-}
-```
+------------------
+
+# Day Two
+## Reduce, Reuse, Refactor
+
+### consolidate classes
+- find all include statement and change them to point to a single "include" or "src" directory. Then move those classes to this directory
+- Configure autoloading after the previous point
+
+### cleanup "Globals" dependency
+- move to constructor
+- pass as argument to constructor
