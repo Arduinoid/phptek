@@ -157,3 +157,49 @@ Accept: application/vnd.resource+1
 - **HTTP API** can use both URI and headers to specify resources
 - **REST** should never change URI's
 
+---------------
+## Webhooks
+**speaker:** *Lorna Mitchell, Nexmo*
+
+> it's a HTTP POST request
+- They are used to notify of events
+- Deliver data when available
+- Broadcasting to multiple clients
+
+### How webhooks work
+- instead of requiring the client to continue making requests to check for the availability of data the server will make a request to a URL that the client provides
+- the relationship with the server is flipped. Provide a URL to the server that you can receive data to
+- You do need to have some server or endpoint available to listen on the provided URL
+
+### Designing webhooks: examples
+- think about what the consumers will want when receiving a webhook
+- prevent a bunch of reactionary API calls to your server as a result of a webhook calls
+> use **[ngrok](https://ngrok.com/)** to test your webhooks
+- send back acknowledgement to the webhook as a good practice
+- Don't do any long running processing upon receiving a webhook because you should respond quickly
+- differ long running process after responding to the sender
+
+### Security
+- it is not secure as is and you should be cautious about data coming back
+- always use SSL
+- use digital signing if possible or shared secret to verify the sender
+
+### Handling request using queues
+- protects against burst traffic
+- this seporates work from the webserver
+- Queues: redis, rabbitMQ, laraval - horizon, sqs, beanstalk
+
+### Getting stuff off the queue with workers
+> workers are long-running scripts that process a series of jobs
+** workers need to be independent**
+- if things go wrong, exit
+- separate thing to monitor or restart (like a supervisor)
+- may not process in order of receipt
+
+### Publishing webhooks
+> webhooks are an implementation of Pub/Sub
+- Put webhooks into a queue when sending to steady the rate (using workers)
+- do not send from a live webserver 
+
+### Tools for workers
+- supervisorsD
