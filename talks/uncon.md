@@ -16,6 +16,7 @@
 ### Tips
 - leverage the scripts in the `composer.json`
 - maintain a change log [keep a changelog](https://keepachangelog.com/en/1.0.0/)
+- open source guide
 - use semantic versioning 
 - make a [readme](https://www.makeareadme.com/)
 - create a `contributing.md` for when people want to get involved
