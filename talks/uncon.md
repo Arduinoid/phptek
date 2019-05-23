@@ -1,6 +1,6 @@
 # Day Three
 ## Build a Composer Package
-
+**speaker** *Ben Ramsey*
 
 > lookup: private packagist
 
@@ -20,3 +20,9 @@
 - make a [readme](https://www.makeareadme.com/)
 - create a `contributing.md` for when people want to get involved
     - code of conduct is good as well
+- you can use badges to inform statistic about your project
+
+### Continuos Integration
+- use this to automatically run tests against PR's to the repo
+- example services: Travis CI, Circle CI, Code Ship
+- **Coveralls** is a test coverage reporting tool
