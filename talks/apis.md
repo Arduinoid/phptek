@@ -203,3 +203,8 @@ Accept: application/vnd.resource+1
 
 ### Tools for workers
 - supervisorsD
+
+---------------
+
+## Building First Class Client Libraries
+
