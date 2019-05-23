@@ -87,3 +87,43 @@ function handle()
 **PHP Stan** and **PHP Phan** and **php inspection**
 
 Phan is a static analyzer Tools
+
+-------------------
+## Application and Service Architecture
+
+### Loose Coupling Services
+- not aware of outside 
+- interact through interfaces
+- open/closed
+
+### services are composable
+
+### Service are abstract
+- small and coherent set of logic
+- details hidden
+- services should be able to be implemented in any langauge
+- interface segregation
+- consumers of the service shouldn't need to change based on implementation changes in the service layer
+
+### Services are discoverable
+- consumers should be able to learn how to interact with it
+- think of dependency injection (service locator)
+
+### Service should be stateless
+- should be cacheable
+- application code shouldn't need to have state
+- database state is ok
+
+### Service should be portable
+- not needing to live in one place on the network
+
+### Contractual
+- implement contracts
+- legal inputs and outputs
+- contracts between components in the application
+
+### applications do a lot of nothing
+
+> (micro)services
+
+> front end controller with a service client that talks to all your services
