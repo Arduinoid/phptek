@@ -42,3 +42,48 @@
     - Elasticsearch
     - Logstash
     - Kibana
+
+-------------------
+
+## Managing large data sets with streams
+
+### you are already dealing with streams
+- file()
+- open()
+- fwrite()
+- fclose9)
+- file_get_contents()
+- file_put_contents()
+
+### Stream Transports
+> use `stream_get_transports()` to see what streams you have
+
+### Stream Wrappers
+`stream_get_wrappers()`
+
+### Stream Filters
+`stream_get_filters()`
+
+### Stream Context
+
+
+### save memory
+`stream_copy_to_stream()`
+
+```php
+function handle()
+{
+    $source = fopen('some/path/to/something', 'rb');
+    $destination = fopen('path/to/destination/file', 'w');
+    stream_copy_to_stream($source, $destination);
+}
+```
+
+> php-office for handling Excel files
+
+---------------------
+
+## Static analysis and strict types
+**PHP Stan** and **PHP Phan** and **php inspection**
+
+Phan is a static analyzer Tools
