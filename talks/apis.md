@@ -142,10 +142,10 @@ an API gateway is a pattern
 - add properties
 
 > **Example** Twilio in one of there API responses has a couple redundant fields that come back because they added new ones that were named more clearly
-> without droping the ild fileds that some one may depend on.
+> without droping the ild fields that some one may depend on.
 
 ### Resource concepts
-- **REST** should tie a resource to an endpoint or URI (not necessarly the code that gets the resource but the resource like "user")
+- **REST** should tie a resource to an endpoint or URI (not necessarily the code that gets the resource but the resource like "user")
     - you may have a v1 and a v2 that both accesses a user resource but one has more info or data available
 - you can put the version in the header if you want
 ```header
@@ -153,7 +153,7 @@ API-Version: 1
 # or
 Accept: application/vnd.resource+1
 ```
-- **RPC** is very flexibale when it comes to URI usage
+- **RPC** is very flexible when it comes to URI usage
 - **HTTP API** can use both URI and headers to specify resources
 - **REST** should never change URI's
 

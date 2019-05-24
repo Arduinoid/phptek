@@ -3,12 +3,9 @@
 
 > if there's data in the database that is not used to load the site then get it out of master
 
-### Resuce
 - put your stuff in a queue
 - put stuff in an offline database
-
-### big picture
-- pro/con is not the an end in itself
+- producer/consumer is not the an end in itself
 
 **Tools**
 - [CloudAMQP](https://www.cloudamqp.com/)
@@ -23,12 +20,12 @@
 ## Data Visualization Pipline
 
 ### Extracting or Offloading work
-- like not hitting the database during the first page load
+- don't hit the database during the first page load
 - using a queue as a programming firewall
 
 ### what to Offloading
 - does the site not respond depending on completing an item?
-- can we process in bulk?
+- can it be processed in bulk?
 
 ### worker pipeline
 - one worker passe to the next
