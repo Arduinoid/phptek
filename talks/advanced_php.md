@@ -28,11 +28,11 @@
 - can it be processed in bulk?
 
 ### worker pipeline
-- one worker passe to the next
-- assembly line (step one, step two, ...)
+- one worker passes to the next
+- assembly line (step one, step two, ...) *think SRP here*
 
 ### implementation
-- all flow down stream. no round trip, fire and for get.
+- all data flow should go down stream with no round trips. Fire and forget.
 
 ### Tools
 - [ELK stack](https://www.elastic.co/elk-stack)
@@ -53,7 +53,7 @@
 - file_put_contents()
 
 ### Stream Transports
-> use `stream_get_transports()` to see what streams you have
+> call `stream_get_transports()` to see what streams you have
 
 ### Stream Wrappers
 `stream_get_wrappers()`
@@ -76,7 +76,7 @@ function handle()
 }
 ```
 
-> php-office for handling Excel files
+> **random note:** php-office for handling Excel files
 
 ---------------------
 
@@ -119,7 +119,7 @@ Phan is a static analyzer Tools
 - legal inputs and outputs
 - contracts between components in the application
 
-### applications do a lot of nothing
+### applications should do a lot of nothing
 
 > (micro)services
 
